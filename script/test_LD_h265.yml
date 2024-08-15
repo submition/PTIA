@@ -1,0 +1,98 @@
+# general settings
+name: test_18_LDP
+model_type: VideoCompressRecurrentModel
+scale: 4
+num_gpu: 1  # set num_gpu: 0 for cpu mode
+manual_seed: 0
+
+
+# dataset and data loader settings
+datasets:
+  test_22:
+    name: test_QP22
+    type: VideoFramesTestDataset # VideoCompressTestDataset  # VideoFramesTestDataset
+    dataroot_gt: datasets/test_18_RGB/GT_1/
+    dataroot_lq: datasets/test_18_RGB/LQ_1/QP22/
+    cache_data: false
+    io_backend:
+      type: disk
+    num_frame: 15
+    padding: reflection_circle
+#
+#  test_27:
+#    name: test_QP27
+#    type: VideoCompressTestDataset
+#    dataroot_gt: datasets/test_18/gt/raw
+#    dataroot_lq: datasets/test_18/lq/LD/QP27
+#    cache_data: false
+#    io_backend:
+#      type: disk
+#    num_frame: 15  # not needed
+#    padding: reflection_circle
+#
+#  test_32:
+#    name: test_QP32
+#    type: VideoCompressTestDataset
+#    dataroot_gt: datasets/test_18/gt/raw
+#    dataroot_lq: datasets/test_18/lq/LD/QP32
+#    cache_data: false
+#    io_backend:
+#      type: disk
+#    num_frame: 15  # not needed
+#    padding: reflection_circle
+##
+#  test_37:
+#    name: test_QP37
+#    type: VideoFramesTestDataset
+#    dataroot_gt: datasets/test_18/gt/raw
+#    dataroot_lq: datasets/test_18/lq/LD/QP37
+#    cache_data: false
+#    io_backend:
+#      type: disk
+#    num_frame: 15  # not needed
+#    padding: reflection_circle
+#
+#  test_42:
+#    name: test_QP42
+#    type: VideoCompressTestDataset
+#    dataroot_gt: datasets/test_18/gt/raw
+#    dataroot_lq: datasets/test_18/lq/LD/QP42
+#    cache_data: false
+#    io_backend:
+#      type: disk
+#    num_frame: 15  # not needed
+#    padding: reflection_circle
+
+# network structures
+network_g:
+  type: CEAVSR
+  spynet_pretrained: /home/jq/Compression/CAVSR-master/checkpoints/spynet_20210409-c6c1bd09.pth
+
+
+
+# path
+path:
+  pretrain_network_g: /home/jq/Compression/CAVSR-master/checkpoints/ldp_2000.pth
+  strict_load_g: true
+
+# validation settings
+val:
+  save_img: true
+  flip_seq: false
+  center_frame_only: false
+  suffix: ~  # add suffix to saved images, if None, use exp name
+  crop_test:
+    scale: 4
+    window_size: [2, 8, 8]
+    tile: [0, 128, 128]
+    tile_overlap: [0, 20, 20]
+
+  metrics:
+    psnr: # metric name, can be arbitrary
+      type: calculate_psnr
+      crop_border: 0
+      test_y_channel: true
+    ssim:
+      type: calculate_ssim
+      crop_border: 0
+      test_y_channel: true
