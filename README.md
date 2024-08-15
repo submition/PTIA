@@ -14,6 +14,7 @@ https://github.com/user-attachments/assets/95db57fa-b208-43a0-99d6-221993960f9c
 
 Vid4 city (CRF=25)
 
+https://github.com/user-attachments/assets/6e96ef62-844f-4723-b740-f5bd56d2960b
 
 BasketballDrill (QP=22)
 
