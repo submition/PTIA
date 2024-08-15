@@ -18,6 +18,7 @@ https://github.com/user-attachments/assets/6e96ef62-844f-4723-b740-f5bd56d2960b
 
 BasketballDrill (QP=22)
 
+https://github.com/user-attachments/assets/6faed323-a611-4669-bd6b-44c663211fda
 
 KristenAndSara (QP=37)
 
