@@ -9,16 +9,16 @@ To further enhance the final super-resolution output, PTIA employs a cross-atten
 
 ### Demo Videos 
 Vid4 calender (CRF=15)
-https://github.com/user-attachments/assets/75dba6ed-2565-4695-8536-e97e3c76a260
+
 
 Vid4 city (CRF=25)
-https://github.com/user-attachments/assets/a10657e4-a4fe-452f-ab94-7068600a87f5
+
 
 BasketballDrill (QP=22)
-https://github.com/user-attachments/assets/d59fdc71-8664-4476-9393-9bbd7aacb21e
+
 
 KristenAndSara (QP=37)
-https://github.com/user-attachments/assets/88d0c4f7-387f-4f0b-bab2-b9dee167bc2a
+
 
 ## Getting Started
 
