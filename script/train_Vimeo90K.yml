@@ -10,8 +10,8 @@ datasets:
   train:
     name: Vimeo90K
     type: Vimeo90KCompressRecurrentDataset
-    dataroot_gt: /media/jq/My Passport/Trans/VSR-Transformer-main/data/vimeo_septuplet/GT
-    dataroot_lq: /media/jq/My Passport/Trans/VSR-Transformer-main/data/vimeo_septuplet/LQ_x4
+    dataroot_gt: data/vimeo_septuplet/GT
+    dataroot_lq: data/vimeo_septuplet/LQ_x4
     lq_subroot:  [BDx4, CRF_15, CRF_25, CRF_35]    #[BI, BI, BI, CRF_15, CRF_25, CRF_35]
     meta_info_file: basicsr/data/meta_info/meta_info_Vimeo90K_train_GT.txt
     io_backend:
@@ -67,12 +67,12 @@ datasets:
 # network structures
 network_g:
   type: CEAVSR
-  spynet_pretrained: /home/jq/Compression/CAVSR-master/checkpoints/spynet_20210409-c6c1bd09.pth
+  spynet_pretrained: checkpoints/spynet_20210409-c6c1bd09.pth
 
 
 # path
 path:
-  pretrain_network_g: /home/jq/Compression/CAVSR-master/checkpoints/net_g_4100.pth
+  pretrain_network_g: ~
   strict_load_g: true
   resume_state: ~
 
