@@ -40,11 +40,11 @@ datasets:
 # network structures
 network_g:
   type: CEAVSR
-  spynet_pretrained: /home/jq/Compression/CAVSR-master/checkpoints/spynet_20210409-c6c1bd09.pth
+  spynet_pretrained: checkpoints/spynet_20210409-c6c1bd09.pth
 
 # path
 path:
-  pretrain_network_g: /home/jq/Compression/CAVSR-master/checkpoints/net_g_15000.pth
+  pretrain_network_g: ~
   strict_load_g: true
 
 # validation settings
