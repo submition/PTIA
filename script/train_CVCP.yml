@@ -11,9 +11,9 @@ datasets:
     name: CVCP
     type: CVCPCompressRecurrentDataset
     val_partition: ~
-    dataroot_gt: /media/jq/My Passport/Compress/CVCP/gt/
-    dataroot_lq: /media/jq/My Passport/Compress/CVCP/lq/LD/
-    lq_subroot:  [QP22, QP27, QP32, QP37]    #[BI, BI, BI, CRF_15, CRF_25, CRF_35]
+    dataroot_gt: CVCP/gt/
+    dataroot_lq: CVCP/lq/LD/
+    lq_subroot:  [QP22, QP27, QP32, QP37]   
     meta_info_file: basicsr/data/meta_info/meta_info_CVCP_GT.txt
     io_backend:
       type: disk
@@ -37,7 +37,7 @@ datasets:
     type: CVCPCompressTestDataset
     dataroot_gt: datasets/test_18_RGB/GT
     dataroot_lq: datasets/test_18_RGB/LQ/LD/QP37
-    meta_info_file: /home/jq/Compression/CAVSR-master/basicsr/data/meta_info/meta_info_test18_v1_GT.txt
+    meta_info_file: basicsr/data/meta_info/meta_info_test18_v1_GT.txt
     cache_data: false
     io_backend:
       type: disk
@@ -47,12 +47,12 @@ datasets:
 
 # network structures
 network_g:
-  type: CEAVSR_c1
-  spynet_pretrained: /home/jq/Compression/CAVSR-master/checkpoints/spynet_20210409-c6c1bd09.pth
+  type: PTIA
+  spynet_pretrained: checkpoints/spynet_20210409-c6c1bd09.pth
 
 # path
 path:
-  pretrain_network_g: /home/jq/Compression/CAVSR-master/checkpoints/net_g_15000.pth
+  pretrain_network_g: ~
   strict_load_g: false
   resume_state: ~
 
