@@ -67,15 +67,15 @@ datasets:
 
 # network structures
 network_g:
-  type: CEAVSR
-  spynet_pretrained: /home/jq/Compression/CAVSR-master/checkpoints/spynet_20210409-c6c1bd09.pth
+  type: PTIA
+  spynet_pretrained: checkpoints/spynet_20210409-c6c1bd09.pth
 
 
 # path
 path:
-  pretrain_network_g: ~  #/home/jq/Compression/CAVSR-master/checkpoints/net_g_145000.pth
+  pretrain_network_g: ~  
   strict_load_g: true
-  resume_state: ~ #/home/jq/Compression/CAVSR-master/experiments/train_REDS/training_states/26000.state
+  resume_state: ~ 
 
 # training settings
 train:
